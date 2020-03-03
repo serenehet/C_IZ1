@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/seren/Documents/GitHub/C_IZ1/iz1
+CMAKE_SOURCE_DIR = /Users/seren/Documents/GitHub/C_IZ1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles /Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,59 +123,59 @@ iz1/fast:
 	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/build
 .PHONY : iz1/fast
 
-dz.o: dz.c.o
+src/dz.o: src/dz.c.o
 
-.PHONY : dz.o
-
-# target to build an object file
-dz.c.o:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/dz.c.o
-.PHONY : dz.c.o
-
-dz.i: dz.c.i
-
-.PHONY : dz.i
-
-# target to preprocess a source file
-dz.c.i:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/dz.c.i
-.PHONY : dz.c.i
-
-dz.s: dz.c.s
-
-.PHONY : dz.s
-
-# target to generate assembly for a file
-dz.c.s:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/dz.c.s
-.PHONY : dz.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
+.PHONY : src/dz.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.o
-.PHONY : main.c.o
+src/dz.c.o:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/dz.c.o
+.PHONY : src/dz.c.o
 
-main.i: main.c.i
+src/dz.i: src/dz.c.i
 
-.PHONY : main.i
+.PHONY : src/dz.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.i
-.PHONY : main.c.i
+src/dz.c.i:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/dz.c.i
+.PHONY : src/dz.c.i
 
-main.s: main.c.s
+src/dz.s: src/dz.c.s
 
-.PHONY : main.s
+.PHONY : src/dz.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.s
-.PHONY : main.c.s
+src/dz.c.s:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/dz.c.s
+.PHONY : src/dz.c.s
+
+src/main.o: src/main.c.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... iz1"
-	@echo "... dz.o"
-	@echo "... dz.i"
-	@echo "... dz.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/dz.o"
+	@echo "... src/dz.i"
+	@echo "... src/dz.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

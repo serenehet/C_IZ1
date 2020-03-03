@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/seren/Documents/GitHub/C_IZ1/iz1/dz.c" "/Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/iz1.dir/dz.c.o"
-  "/Users/seren/Documents/GitHub/C_IZ1/iz1/main.c" "/Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/iz1.dir/main.c.o"
+  "/Users/seren/Documents/GitHub/C_IZ1/src/dz.c" "/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/iz1.dir/src/dz.c.o"
+  "/Users/seren/Documents/GitHub/C_IZ1/src/main.c" "/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/iz1.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

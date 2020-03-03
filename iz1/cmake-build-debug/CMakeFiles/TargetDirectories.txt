@@ -1,3 +1,0 @@
-/Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/seren/Documents/GitHub/C_IZ1/iz1/cmake-build-debug/CMakeFiles/iz1.dir
