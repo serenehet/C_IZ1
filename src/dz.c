@@ -72,7 +72,7 @@ int fillPoints(Points * points) {
     return size;
 }
 
-float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3) {
+float getAreaTriangle(const float x1, const float x2, const float x3, const float y1, const float y2, const float y3) {
     float size1 = sqrtf((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
     float size2 = sqrtf((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
     float size3 = sqrtf((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));

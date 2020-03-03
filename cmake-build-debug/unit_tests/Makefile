@@ -167,6 +167,102 @@ depend:
 	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+unit_tests/CMakeFiles/myTests_tests.dir/rule:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 unit_tests/CMakeFiles/myTests_tests.dir/rule
+.PHONY : unit_tests/CMakeFiles/myTests_tests.dir/rule
+
+# Convenience name for target.
+myTests_tests: unit_tests/CMakeFiles/myTests_tests.dir/rule
+
+.PHONY : myTests_tests
+
+# fast build rule for target.
+myTests_tests/fast:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/build
+.PHONY : myTests_tests/fast
+
+__/src/dz.o: __/src/dz.c.o
+
+.PHONY : __/src/dz.o
+
+# target to build an object file
+__/src/dz.c.o:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/__/src/dz.c.o
+.PHONY : __/src/dz.c.o
+
+__/src/dz.i: __/src/dz.c.i
+
+.PHONY : __/src/dz.i
+
+# target to preprocess a source file
+__/src/dz.c.i:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/__/src/dz.c.i
+.PHONY : __/src/dz.c.i
+
+__/src/dz.s: __/src/dz.c.s
+
+.PHONY : __/src/dz.s
+
+# target to generate assembly for a file
+__/src/dz.c.s:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/__/src/dz.c.s
+.PHONY : __/src/dz.c.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+myTests.o: myTests.cpp.o
+
+.PHONY : myTests.o
+
+# target to build an object file
+myTests.cpp.o:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/myTests.cpp.o
+.PHONY : myTests.cpp.o
+
+myTests.i: myTests.cpp.i
+
+.PHONY : myTests.i
+
+# target to preprocess a source file
+myTests.cpp.i:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/myTests.cpp.i
+.PHONY : myTests.cpp.i
+
+myTests.s: myTests.cpp.s
+
+.PHONY : myTests.s
+
+# target to generate assembly for a file
+myTests.cpp.s:
+	cd /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/myTests.cpp.s
+.PHONY : myTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -180,6 +276,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... test"
+	@echo "... myTests_tests"
+	@echo "... __/src/dz.o"
+	@echo "... __/src/dz.i"
+	@echo "... __/src/dz.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... myTests.o"
+	@echo "... myTests.i"
+	@echo "... myTests.s"
 .PHONY : help
 
 

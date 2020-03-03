@@ -1,14 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
-project(dz1)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-
-set(SOURCE_FILES src/dz.c)
-add_executable(log ${SOURCE_FILES} src/dz.c)
-if(UNIX AND NOT APPLE)
-    target_link_libraries(dz1 m)
-endif()
-
+project(C_IZ1 C)
+enable_language(C CXX ASM)
+set(CMAKE_C_FLAGS  "-std=c11")
 
 configure_file(CMakeLists.txt.in
         googletest-download/CMakeLists.txt)

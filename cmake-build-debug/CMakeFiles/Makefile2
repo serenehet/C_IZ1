@@ -53,7 +53,6 @@ CMAKE_BINARY_DIR = /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/log.dir/all
 all: CMakeFiles/C_IZ1.dir/all
 all: googletest-build/all
 all: unit_tests/all
@@ -61,7 +60,6 @@ all: unit_tests/all
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/log.dir/clean
 clean: CMakeFiles/C_IZ1.dir/clean
 clean: googletest-build/clean
 clean: unit_tests/clean
@@ -73,33 +71,6 @@ preinstall: googletest-build/preinstall
 preinstall: unit_tests/preinstall
 
 .PHONY : preinstall
-
-#=============================================================================
-# Target rules for target CMakeFiles/log.dir
-
-# All Build rule for target.
-CMakeFiles/log.dir/all:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/depend
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target log"
-.PHONY : CMakeFiles/log.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/log.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/log.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/log.dir/rule
-
-# Convenience name for target.
-log: CMakeFiles/log.dir/rule
-
-.PHONY : log
-
-# clean rule for target.
-CMakeFiles/log.dir/clean:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/clean
-.PHONY : CMakeFiles/log.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/C_IZ1.dir
@@ -301,12 +272,12 @@ googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 # Directory level rules for directory unit_tests
 
 # Recursive "all" directory target.
-unit_tests/all:
+unit_tests/all: unit_tests/CMakeFiles/myTests_tests.dir/all
 
 .PHONY : unit_tests/all
 
 # Recursive "clean" directory target.
-unit_tests/clean:
+unit_tests/clean: unit_tests/CMakeFiles/myTests_tests.dir/clean
 
 .PHONY : unit_tests/clean
 
@@ -314,6 +285,34 @@ unit_tests/clean:
 unit_tests/preinstall:
 
 .PHONY : unit_tests/preinstall
+
+#=============================================================================
+# Target rules for target unit_tests/CMakeFiles/myTests_tests.dir
+
+# All Build rule for target.
+unit_tests/CMakeFiles/myTests_tests.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+unit_tests/CMakeFiles/myTests_tests.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/depend
+	$(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles --progress-num=12,13,14,15 "Built target myTests_tests"
+.PHONY : unit_tests/CMakeFiles/myTests_tests.dir/all
+
+# Build rule for subdir invocation for target.
+unit_tests/CMakeFiles/myTests_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 unit_tests/CMakeFiles/myTests_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles 0
+.PHONY : unit_tests/CMakeFiles/myTests_tests.dir/rule
+
+# Convenience name for target.
+myTests_tests: unit_tests/CMakeFiles/myTests_tests.dir/rule
+
+.PHONY : myTests_tests
+
+# clean rule for target.
+unit_tests/CMakeFiles/myTests_tests.dir/clean:
+	$(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/clean
+.PHONY : unit_tests/CMakeFiles/myTests_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

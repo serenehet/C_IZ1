@@ -168,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named log
-
-# Build rule for target.
-log: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 log
-.PHONY : log
-
-# fast build rule for target.
-log/fast:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
-.PHONY : log/fast
-
-#=============================================================================
 # Target rules for targets named C_IZ1
 
 # Build rule for target.
@@ -245,13 +232,25 @@ gtest/fast:
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named myTests_tests
+
+# Build rule for target.
+myTests_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myTests_tests
+.PHONY : myTests_tests
+
+# fast build rule for target.
+myTests_tests/fast:
+	$(MAKE) -f unit_tests/CMakeFiles/myTests_tests.dir/build.make unit_tests/CMakeFiles/myTests_tests.dir/build
+.PHONY : myTests_tests/fast
+
 src/dz.o: src/dz.c.o
 
 .PHONY : src/dz.o
 
 # target to build an object file
 src/dz.c.o:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.o
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.o
 .PHONY : src/dz.c.o
 
@@ -261,7 +260,6 @@ src/dz.i: src/dz.c.i
 
 # target to preprocess a source file
 src/dz.c.i:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.i
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.i
 .PHONY : src/dz.c.i
 
@@ -271,7 +269,6 @@ src/dz.s: src/dz.c.s
 
 # target to generate assembly for a file
 src/dz.c.s:
-	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.s
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.s
 .PHONY : src/dz.c.s
 
@@ -314,13 +311,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... log"
 	@echo "... test"
 	@echo "... C_IZ1"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... myTests_tests"
 	@echo "... src/dz.o"
 	@echo "... src/dz.i"
 	@echo "... src/dz.s"
