@@ -53,7 +53,7 @@
     1 2 3
     ---
  */
-#include "dz.h"
+#include "../include/dz.h"
 
 extern unsigned int numberOfVertices;
 

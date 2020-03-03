@@ -2,7 +2,7 @@
 // Created by Sergei Alexeev on 03.03.2020.
 //
 
-#include "dz.h"
+#include "../include/dz.h"
 #include <stdio.h>
 
 const unsigned int maxLengthIntStr = 12; // максимальная длина int в строковом типе + последний символ \0
