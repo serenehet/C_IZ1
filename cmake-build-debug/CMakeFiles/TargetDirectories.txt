@@ -4,6 +4,7 @@
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/log.dir
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/test.dir
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/C_IZ1.dir
 /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-build/CMakeFiles/install/strip.dir

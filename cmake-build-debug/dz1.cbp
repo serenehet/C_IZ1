@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="C_IZ1"/>
+		<Option title="dz1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\googletest-src\;CMake Files\cmake-build-debug\googletest-src\googlemock\;CMake Files\cmake-build-debug\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\googletest-src\googletest\;CMake Files\cmake-build-debug\googletest-src\googletest\cmake\;CMake Files\unit_tests\;"/>
@@ -85,6 +85,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -106,6 +107,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -137,6 +139,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -158,6 +161,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -182,6 +186,7 @@
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -206,6 +211,7 @@
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -230,6 +236,7 @@
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -254,6 +261,7 @@
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -276,6 +284,7 @@
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -298,6 +307,7 @@
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -320,6 +330,7 @@
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -342,6 +353,7 @@
 				<Compiler>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>

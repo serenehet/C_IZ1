@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named log
+
+# Build rule for target.
+log: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 log
+.PHONY : log
+
+# fast build rule for target.
+log/fast:
+	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
+.PHONY : log/fast
+
+#=============================================================================
 # Target rules for targets named C_IZ1
 
 # Build rule for target.
@@ -238,6 +251,7 @@ src/dz.o: src/dz.c.o
 
 # target to build an object file
 src/dz.c.o:
+	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.o
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.o
 .PHONY : src/dz.c.o
 
@@ -247,6 +261,7 @@ src/dz.i: src/dz.c.i
 
 # target to preprocess a source file
 src/dz.c.i:
+	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.i
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.i
 .PHONY : src/dz.c.i
 
@@ -256,6 +271,7 @@ src/dz.s: src/dz.c.s
 
 # target to generate assembly for a file
 src/dz.c.s:
+	$(MAKE) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/dz.c.s
 	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.s
 .PHONY : src/dz.c.s
 
@@ -298,6 +314,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... install/local"
+	@echo "... log"
 	@echo "... test"
 	@echo "... C_IZ1"
 	@echo "... gmock"

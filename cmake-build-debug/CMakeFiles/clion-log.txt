@@ -1,9 +1,14 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/seren/Documents/GitHub/C_IZ1
-CMake Error at CMakeLists.txt:5 (target_link_libraries):
-  Cannot specify link libraries for target "<C_IZ1" which is not built by
-  this project.
-
-
--- Configuring incomplete, errors occurred!
-See also "/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/CMakeFiles/CMakeError.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug/googletest-download
+[ 11%] Performing update step for 'googletest'
+[ 22%] No configure step for 'googletest'
+[ 33%] No build step for 'googletest'
+[ 44%] No install step for 'googletest'
+[ 55%] No test step for 'googletest'
+[ 66%] Completed 'googletest'
+[100%] Built target googletest
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/seren/Documents/GitHub/C_IZ1/cmake-build-debug
