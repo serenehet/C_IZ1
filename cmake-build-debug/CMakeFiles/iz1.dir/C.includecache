@@ -14,12 +14,6 @@ stdlib.h
 math.h
 -
 
-/Users/seren/Documents/GitHub/C_IZ1/src/dz.c
-../include/dz.h
-/Users/seren/Documents/GitHub/C_IZ1/include/dz.h
-stdio.h
--
-
 /Users/seren/Documents/GitHub/C_IZ1/src/main.c
 ../include/dz.h
 /Users/seren/Documents/GitHub/C_IZ1/include/dz.h
