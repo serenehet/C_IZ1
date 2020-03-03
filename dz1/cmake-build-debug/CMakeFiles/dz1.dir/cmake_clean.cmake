@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dz1.dir/main.c.o"
+  "CMakeFiles/dz1.dir/src/dz.c.o"
+  "CMakeFiles/dz1.dir/src/main.c.o"
   "dz1"
   "dz1.pdb"
 )

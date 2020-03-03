@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.c" "/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles/dz1.dir/src/dz.c.o"
-  "/Users/seren/Documents/GitHub/C_IZ1/dz1/src/main.c" "/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles/dz1.dir/src/main.c.o"
+  "/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.c" "/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles/C_IZ1.dir/src/dz.c.o"
+  "/Users/seren/Documents/GitHub/C_IZ1/dz1/src/main.c" "/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles/C_IZ1.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../include"
   )
 
 # Targets to which this target links.

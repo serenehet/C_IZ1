@@ -53,12 +53,12 @@ CMAKE_BINARY_DIR = /Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/dz1.dir/all
+all: CMakeFiles/C_IZ1.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/dz1.dir/clean
+clean: CMakeFiles/C_IZ1.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +68,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/dz1.dir
+# Target rules for target CMakeFiles/C_IZ1.dir
 
 # All Build rule for target.
-CMakeFiles/dz1.dir/all:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/depend
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target dz1"
-.PHONY : CMakeFiles/dz1.dir/all
+CMakeFiles/C_IZ1.dir/all:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/depend
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target C_IZ1"
+.PHONY : CMakeFiles/C_IZ1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/dz1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dz1.dir/all
+CMakeFiles/C_IZ1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/C_IZ1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/seren/Documents/GitHub/C_IZ1/dz1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/dz1.dir/rule
+.PHONY : CMakeFiles/C_IZ1.dir/rule
 
 # Convenience name for target.
-dz1: CMakeFiles/dz1.dir/rule
+C_IZ1: CMakeFiles/C_IZ1.dir/rule
 
-.PHONY : dz1
+.PHONY : C_IZ1
 
 # clean rule for target.
-CMakeFiles/dz1.dir/clean:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/clean
-.PHONY : CMakeFiles/dz1.dir/clean
+CMakeFiles/C_IZ1.dir/clean:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/clean
+.PHONY : CMakeFiles/C_IZ1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

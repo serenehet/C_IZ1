@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named dz1
+# Target rules for targets named C_IZ1
 
 # Build rule for target.
-dz1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dz1
-.PHONY : dz1
+C_IZ1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 C_IZ1
+.PHONY : C_IZ1
 
 # fast build rule for target.
-dz1/fast:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/build
-.PHONY : dz1/fast
+C_IZ1/fast:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/build
+.PHONY : C_IZ1/fast
 
-main.o: main.c.o
+src/dz.o: src/dz.c.o
 
-.PHONY : main.o
+.PHONY : src/dz.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/main.c.o
-.PHONY : main.c.o
+src/dz.c.o:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.o
+.PHONY : src/dz.c.o
 
-main.i: main.c.i
+src/dz.i: src/dz.c.i
 
-.PHONY : main.i
+.PHONY : src/dz.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/main.c.i
-.PHONY : main.c.i
+src/dz.c.i:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.i
+.PHONY : src/dz.c.i
 
-main.s: main.c.s
+src/dz.s: src/dz.c.s
 
-.PHONY : main.s
+.PHONY : src/dz.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/dz1.dir/build.make CMakeFiles/dz1.dir/main.c.s
-.PHONY : main.c.s
+src/dz.c.s:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/dz.c.s
+.PHONY : src/dz.c.s
+
+src/main.o: src/main.c.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/C_IZ1.dir/build.make CMakeFiles/C_IZ1.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... dz1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... C_IZ1"
+	@echo "... src/dz.o"
+	@echo "... src/dz.i"
+	@echo "... src/dz.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

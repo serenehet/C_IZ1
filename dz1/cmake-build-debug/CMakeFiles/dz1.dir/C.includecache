@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.c
+dz.h
+/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.h
+stdio.h
+-
+
+/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.h
+
+/Users/seren/Documents/GitHub/C_IZ1/dz1/src/main.c
+dz.h
+/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.h
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+
