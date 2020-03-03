@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.c">
+		<Unit filename="/Users/seren/Documents/GitHub/C_IZ1/dz1/include/dz.h">
 			<Option target="C_IZ1"/>
 		</Unit>
-		<Unit filename="/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.h">
+		<Unit filename="/Users/seren/Documents/GitHub/C_IZ1/dz1/src/dz.c">
 			<Option target="C_IZ1"/>
 		</Unit>
 		<Unit filename="/Users/seren/Documents/GitHub/C_IZ1/dz1/src/main.c">
