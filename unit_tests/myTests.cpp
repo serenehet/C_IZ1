@@ -76,18 +76,9 @@ TEST(testMainFunc, test3) {
     size_t size = 2;
     float **xArray = NULL;
     float **yArray = NULL;
+
     int ** testRes = getIndexOfMaxAreaTriangle(xArray, yArray, size);
     ASSERT_EQ(NULL, testRes);
-
-    if (testRes != NULL) {
-        freeIndexArray(&testRes, 3);
-    }
-    Points points;
-    points.xArray = xArray;
-    points.yArray = yArray;
-    if (xArray != NULL && yArray != NULL) {
-        freePoints(&points, size);
-    }
 }
 
 TEST(testMainFunc, test4) {
