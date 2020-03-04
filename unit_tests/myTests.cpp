@@ -9,8 +9,8 @@ extern "C" {
 
 TEST(testMainFunc, test1) {
     size_t size = 3;
-    auto ** xArray = (float **)calloc(3, sizeof(float *));
-    auto ** yArray = (float **)calloc(3, sizeof(float *));
+    float ** xArray = (float **)calloc(3, sizeof(float *));
+    float ** yArray = (float **)calloc(3, sizeof(float *));
     int ** res = (int **)calloc(3, sizeof(int *));
     for (int i = 0; i < size; ++i) {
         xArray[i] = (float *)malloc(sizeof(float));
