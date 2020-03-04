@@ -73,11 +73,12 @@ int fillPoints(Points * points) {
 }
 
 float getAreaTriangle(const float x1, const float x2, const float x3, const float y1, const float y2, const float y3) {
-    float size1 = sqrtf((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-    float size2 = sqrtf((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
-    float size3 = sqrtf((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
-    float halfPerimetr = (size1 + size2 + size3) / 2;
-    return sqrtf(halfPerimetr * (halfPerimetr - size1) * (halfPerimetr - size2) * (halfPerimetr - size3));   //формула Герона для выч. площади
+    // не используем корни, они не влияют
+    float size1 = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
+    float midx12 = (x1 + x2) / 2;
+    float midy12 = (y1 + y2) / 2;
+    float size2 = (x3 - midx12) * (x3 - midx12) + (y3 - midy12) * (y3 - midy12);
+    return size1 * size2;
 }
 
 
