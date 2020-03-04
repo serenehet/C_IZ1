@@ -49,7 +49,9 @@ TEST(testMainFunc, test2) {
     for (int i = 0; i < size; ++i) {
         xArray[i] = (float *)malloc(sizeof(float));
         yArray[i] = (float *)malloc(sizeof(float));
-        res[i] = (int *)malloc(sizeof(int));
+        if (i < 3) {
+            res[i] = (int *)malloc(sizeof(int));
+        }
     }
 
     xArray[0][0] = 0; yArray[0][0] = 0;
