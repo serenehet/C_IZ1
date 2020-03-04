@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
-  "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeASMInformation.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCInformation.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCXXInformation.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -28,7 +27,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/AppleClang-C.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/AppleClang-CXX.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/Clang-ASM.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/Clang.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/Compiler/GNU.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
@@ -49,7 +47,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake"
   "../CMakeLists.txt"
   "../CMakeLists.txt.in"
-  "CMakeFiles/3.15.3/CMakeASMCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeSystem.cmake"

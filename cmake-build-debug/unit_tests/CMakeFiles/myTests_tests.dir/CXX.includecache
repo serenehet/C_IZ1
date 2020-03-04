@@ -12,10 +12,6 @@ stdio.h
 stdlib.h
 -
 
-/Users/seren/Documents/GitHub/C_IZ1/unit_tests/main.cpp
-gtest/gtest.h
-/Users/seren/Documents/GitHub/C_IZ1/unit_tests/gtest/gtest.h
-
 /Users/seren/Documents/GitHub/C_IZ1/unit_tests/myTests.cpp
 gtest/gtest.h
 /Users/seren/Documents/GitHub/C_IZ1/unit_tests/gtest/gtest.h

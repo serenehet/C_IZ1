@@ -83,6 +83,7 @@ float getAreaTriangle(const float x1, const float x2, const float x3, const floa
 
 
 int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
+    if (n < 3) { return NULL; }
     float maxArea = getAreaTriangle(*xArray[0], *xArray[1], *xArray[2], *yArray[0], *yArray[1], *yArray[2]);
     unsigned int i1 = 0, i2 = 1, i3 = 2;    // берем первые три элемента для начального максимальной площади
     for (size_t i = 0; i < n - 2; ++i) {

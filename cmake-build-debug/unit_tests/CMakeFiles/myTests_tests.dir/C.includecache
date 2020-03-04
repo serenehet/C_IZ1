@@ -6,15 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/Users/seren/Documents/GitHub/C_IZ1/include/dz.h
-stdio.h
--
-stdlib.h
--
-
-/Users/seren/Documents/GitHub/C_IZ1/src/dz.c
-../include/dz.h
-/Users/seren/Documents/GitHub/C_IZ1/include/dz.h
-stdio.h
--
-

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 project(C_IZ1 C)
-enable_language(C CXX ASM)
+enable_language(C CXX)
 set(CMAKE_C_FLAGS  "-std=c11")
 
 configure_file(CMakeLists.txt.in
