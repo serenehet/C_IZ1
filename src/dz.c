@@ -81,7 +81,7 @@ float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3
 
 
 int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
-    if ((n < 3) || xArray == NULL || yArray == NULL) { return NULL; }
+    if ((n < numberOfVertices) || xArray == NULL || yArray == NULL) { return NULL; }
     float maxArea = getAreaTriangle(*xArray[0], *xArray[1], *xArray[2], *yArray[0], *yArray[1], *yArray[2]);
     unsigned int i1 = 0, i2 = 1, i3 = 2;    // берем первые три элемента для начального максимальной площади
     for (size_t i = 0; i < n - 2; ++i) {
@@ -114,6 +114,7 @@ int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
 }
 
 void printPtrArray(const int ** indexArray, size_t size) {
+    if (indexArray == NULL) { return; }
     for (size_t i = 0; i < size; ++i) {
         printf("%d ", *indexArray[i]);
     }
