@@ -19,7 +19,7 @@ float getFloat();
 int fillPoints(Points * points);
 float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3);
 int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n);
-void printPtrArray(int ** indexArray, size_t size);
+void printPtrArray(const int ** indexArray, size_t size);
 void freeIndexArray(int *** indexArray, size_t size);
 void freePoints(Points * points, size_t size);
 

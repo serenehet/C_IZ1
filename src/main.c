@@ -63,7 +63,7 @@ int main() {
     points.yArray = NULL;
 
     size_t size = 0;
-//    size = fillPoints(&points); закоментил, что бы прошел travis
+    size = fillPoints(&points);
     if (size == 0) { return 0; }
 
     int ** indexArray = getIndexOfMaxAreaTriangle(points.xArray, points.yArray, size);
