@@ -1,16 +1,12 @@
 dist:     trusty    # используем Ubuntu 14.04 Trusty Tahr (а не 12.02 Precise Pangolin)
 sudo:     required  # используем Virtual Machine (а не Docker container)
 
-language: c      # на практике разницы между специфичным для C++ окружением
-# и, скажем, python -- никакой. Но пусть будет cpp.
-
+language: c
 os:
-  # будем прогонять CI и на Linux, и на Mac OS X...
   - linux
   - osx
 
 compiler:
-  # ... и с помощью GCC, и Clang
   - gcc
   - clang
 
@@ -45,10 +41,12 @@ matrix:
 
 script:
   # скрипт сборки и тестирования проекта:
+
   - mkdir build
   - cd build
   - cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION -DTARGET_CPU=$TARGET_CPU
   - cmake --build .
   - ctest --output-on-failure
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then valgrind ./C_IZ1 ; fi
+  - cd ..
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cppcheck --enable=warning,performance,information ./src ./unit_tests ./include/*.h; fi
