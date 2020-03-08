@@ -8,20 +8,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-typedef struct Points{
-    float **xArray;
-    float **yArray;
-} Points;
-
 int getInt();
 float getFloat();
-int fillPoints(Points * points);
+size_t fillPointsArray(float ** pointsArray);
 float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3);
 int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n);
 void printPtrArray(const int ** indexArray, size_t size);
 void freeIndexArray(int *** indexArray, size_t size);
-void freePoints(Points * points, size_t size);
-
+void freePointsArray(float *** pointsArray, size_t numberCoordinate);
 
 #endif //IZ1_DZ_H

@@ -23,11 +23,11 @@
  *  ---
  *  Ввод:
  *      5
- *      0.0 0.0
- *      5.0 5.0
- *      90.3 90.3
- *      -90.4 - 90.5
- *      5 5.8
+ *      2 2
+ *      3 3
+ *      0 0
+ *      90 0
+ *      0 90
  *  Вывод:
  *      2 3 4
  *  ---
@@ -56,22 +56,22 @@
 #include "../include/dz.h"
 
 extern unsigned int numberOfVertices;
+extern const unsigned int nCoordinates;
+extern const unsigned int iX;
+extern const unsigned int iY;
 
 int main() {
-    Points points;
-    points.xArray = NULL;
-    points.yArray = NULL;
-
-    size_t size = 0;
-    //size = fillPoints(&points); чтобы прошел travis
-    if (size == 0) { return 0; }
-
-    int ** indexArray = getIndexOfMaxAreaTriangle(points.xArray, points.yArray, size);
-    if (indexArray == NULL) { freePoints(&points, size); return 0; }
-
-    printPtrArray(indexArray, numberOfVertices);
-
+    // выделяем память
+    float ** pointsArray = (float **)calloc(nCoordinates, sizeof(float *));
+    //заполняем массивы из стандартного ввода
+    size_t size = fillPointsArray(pointsArray); //закоментировать, для прохождения travis
+    if (size < 3) { return 0; }
+    //получаем решение
+    int ** indexArray = getIndexOfMaxAreaTriangle(&(pointsArray[iX]), &(pointsArray[iY]), size);
+    //печатаем решение
+    printPtrArray((const int **) indexArray, numberOfVertices);
+    //освобождаем память
     freeIndexArray(&indexArray, numberOfVertices);
-    freePoints(&points, size);
+    freePointsArray(&pointsArray, nCoordinates);
     return 0;
 }

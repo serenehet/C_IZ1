@@ -8,6 +8,9 @@
 const unsigned int maxLengthIntStr = 12; // максимальная длина int в строковом типе + последний символ \0
 const unsigned int maxLengthFloatStr = 25; // максимальная длина float в строковом типе + последний символ \0
 const unsigned int numberOfVertices = 3; // у треугольника 3 вершины :)
+const unsigned int iX = 0;
+const unsigned int iY = 0;
+const unsigned nCoordinates = 2;
 
 int getInt() {
     char * buffer = calloc(maxLengthIntStr, sizeof(char));
@@ -52,21 +55,19 @@ float getFloat() {
     return number;
 }
 
-int fillPoints(Points * points) {
+size_t fillPointsArray(float ** pointsArray) {
     size_t size = (size_t)getInt();
-    if (size < 3) { return  0; }
-    points->xArray = (float **)calloc(size, sizeof(float *));
-    points->yArray = (float **)calloc(size, sizeof(float *));
+    if (pointsArray == NULL || size < 3) { return  0; }
+
+    pointsArray[iX] = (float *)calloc(size, sizeof(float));
+    if (pointsArray[iX] == NULL) { return 0; }
+    pointsArray[iY] = (float *)calloc(size, sizeof(float));
+    if (pointsArray[iY] == NULL) {freePointsArray(&pointsArray, nCoordinates - 1); return 0; }
 
     for (size_t i = 0; i < size; ++i) {
-        points->xArray[i] = (float *)malloc(sizeof(float));
-        points->yArray[i] = (float *)malloc(sizeof(float));
-        if (points->xArray[i] == NULL || points->yArray == NULL) { freePoints((Points *) &points, size); return 0; }
-
-        points->xArray[i][0] = getFloat();
-        points->yArray[i][0] = getFloat();
+        pointsArray[iX][i] = getFloat();
+        pointsArray[iY][i] = getFloat();
     }
-
     return size;
 }
 
@@ -82,25 +83,8 @@ float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3
 
 int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
     if ((n < numberOfVertices) || xArray == NULL || yArray == NULL) { return NULL; }
-    float maxArea = getAreaTriangle(*xArray[0], *xArray[1], *xArray[2], *yArray[0], *yArray[1], *yArray[2]);
-    unsigned int i1 = 0, i2 = 1, i3 = 2;    // берем первые три элемента для начального максимальной площади
-    for (size_t i = 0; i < n - 2; ++i) {
-        for (size_t j = i + 1; j < n -1; ++j) {
-            for (size_t t = j + 1; t < n; ++t) {
-                float temp = (getAreaTriangle(*xArray[i], *xArray[j], *xArray[t], *yArray[i], *yArray[j], *yArray[t]));
-                if (temp > maxArea) {
-                    i1 = i;
-                    i2 = j;
-                    i3 = t;
-                    maxArea = temp;
-                }
-            }
-        }
-    }
 
-    if (maxArea <= 0.0) { return NULL; }
-
-
+    float maxArea = 0.0f;
     int ** res = (int **)calloc(numberOfVertices, sizeof(int *));
     if (res == NULL) { return  NULL;}
     for (size_t i = 0 ; i < numberOfVertices; ++i) {
@@ -109,29 +93,45 @@ int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
             freeIndexArray(&res, i);
         }
     }
-    res[0][0] = i1; res[1][0] = i2; res[2][0] = i3;
+    for (size_t i = 0; i < n - 2; ++i) {
+        for (size_t j = i + 1; j < n -1; ++j) {
+            for (size_t t = j + 1; t < n; ++t) {
+                float temp = (getAreaTriangle((*xArray)[i], (*xArray)[j], (*xArray)[t], (*yArray)[i], (*yArray)[j], (*yArray)[t]));
+                if (temp > maxArea) {
+                    *(res[0]) = i;
+                    *(res[1]) = j;
+                    *(res[2]) = t;
+                    maxArea = temp;
+                }
+            }
+        }
+    }
+    if (maxArea <= 0.0f) { freeIndexArray(&res, numberOfVertices); return NULL; }
     return res;
 }
 
 void printPtrArray(const int ** indexArray, size_t size) {
     if (indexArray == NULL) { return; }
+
     for (size_t i = 0; i < size; ++i) {
         printf("%d ", *indexArray[i]);
     }
 }
 
 void freeIndexArray(int *** indexArray, size_t size) {
+    if (indexArray == NULL) { return; }
+
     for (size_t i = 0; i < size; i++) {
         free(indexArray[0][i]);
     }
     free(indexArray[0]);
 }
 
-void freePoints(Points * points, size_t size) {
-    for (size_t i = 0; i < size; ++i) {
-        free(points->xArray[i]);
-        free(points->yArray[i]);
+void freePointsArray(float *** pointsArray, size_t numberCoordinate) {
+    if (pointsArray == NULL) { return; }
+
+    for (size_t i = 0; i < numberCoordinate; i++) {
+        free(pointsArray[0][i]);
     }
-    free(points->xArray);
-    free(points->yArray);
+    free(pointsArray[0]);
 }
