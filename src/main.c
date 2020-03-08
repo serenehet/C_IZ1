@@ -64,7 +64,8 @@ int main() {
     // выделяем память
     float ** pointsArray = (float **)calloc(nCoordinates, sizeof(float *));
     //заполняем массивы из стандартного ввода
-    size_t size = fillPointsArray(pointsArray); //закоментировать, для прохождения travis
+    size_t size = 0;
+//    size = fillPointsArray(pointsArray); //закоментировать, для прохождения travis
     if (size < 3) { return 0; }
     //получаем решение
     int ** indexArray = getIndexOfMaxAreaTriangle(&(pointsArray[iX]), &(pointsArray[iY]), size);
