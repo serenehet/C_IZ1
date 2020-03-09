@@ -8,7 +8,6 @@
 const unsigned int maxLengthIntStr = 12; // максимальная длина int в строковом типе + последний символ \0
 const unsigned int maxLengthFloatStr = 25; // максимальная длина float в строковом типе + последний символ \0
 const unsigned int numberOfVertices = 3; // у треугольника 3 вершины :)
-const unsigned nCoordinates = 2;
 
 int getInt() {
     char * buffer = calloc(maxLengthIntStr, sizeof(char));

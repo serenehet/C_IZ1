@@ -56,7 +56,6 @@
 #include "../include/dz.h"
 
 extern unsigned int numberOfVertices;
-extern const unsigned int nCoordinates;
 
 int main() {
     // выделяем память
@@ -65,7 +64,7 @@ int main() {
     points.yArray = NULL;
     //заполняем массивы из стандартного ввода
     size_t size = 0;
-    size = fillPoints(&points);
+//    size = fillPoints(&points); //закоментировать для travis
     if (size < 3) { return 0; }
     //получаем решение
     int ** indexArray = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
