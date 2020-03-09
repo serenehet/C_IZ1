@@ -8,8 +8,6 @@
 const unsigned int maxLengthIntStr = 12; // максимальная длина int в строковом типе + последний символ \0
 const unsigned int maxLengthFloatStr = 25; // максимальная длина float в строковом типе + последний символ \0
 const unsigned int numberOfVertices = 3; // у треугольника 3 вершины :)
-const unsigned int iX = 0;
-const unsigned int iY = 0;
 const unsigned nCoordinates = 2;
 
 int getInt() {
@@ -35,7 +33,7 @@ int getInt() {
 
 float getFloat() {
     char * buffer = calloc(maxLengthFloatStr, sizeof(char));
-    if (buffer == NULL) { return 0.0; }
+    if (buffer == NULL) { return 0.0f; }
 
     char temp;
     int i = 0;
@@ -55,18 +53,23 @@ float getFloat() {
     return number;
 }
 
-size_t fillPointsArray(float ** pointsArray) {
+size_t fillPoints(Points * points) {
+    //получаем колво точек
     size_t size = (size_t)getInt();
-    if (pointsArray == NULL || size < 3) { return  0; }
+    if (points == NULL || size < 3 ) { return 0; }
 
-    pointsArray[iX] = (float *)calloc(size, sizeof(float));
-    if (pointsArray[iX] == NULL) { return 0; }
-    pointsArray[iY] = (float *)calloc(size, sizeof(float));
-    if (pointsArray[iY] == NULL) {freePointsArray(&pointsArray, nCoordinates - 1); return 0; }
+    //выделяем память под x координаты
+    if (points->xArray != NULL) { free(points->xArray); }
+    points->xArray = (float *)calloc(size, sizeof(float));
+    if (points->xArray == NULL) { return 0; }
 
+    //выделяем память под у координаты
+    if (points->yArray != NULL) { free(points->yArray); }
+    points->yArray = (float *)calloc(size, sizeof(float));
+    if (points->yArray == NULL) { freePoints(points); return 0; }
     for (size_t i = 0; i < size; ++i) {
-        pointsArray[iX][i] = getFloat();
-        pointsArray[iY][i] = getFloat();
+        points->xArray[i] = getFloat();
+        points->yArray[i] = getFloat();
     }
     return size;
 }
@@ -80,11 +83,9 @@ float getAreaTriangle(float x1, float x2, float x3, float y1, float y2, float y3
     return size1 * size2;
 }
 
+int **getIndexMaxAreaTriangle(const float * xArray, const float * yArray, size_t size) {
+    if (size < numberOfVertices || xArray == NULL || yArray == NULL) { return NULL; }
 
-int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
-    if ((n < numberOfVertices) || xArray == NULL || yArray == NULL) { return NULL; }
-
-    float maxArea = 0.0f;
     int ** res = (int **)calloc(numberOfVertices, sizeof(int *));
     if (res == NULL) { return  NULL;}
     for (size_t i = 0 ; i < numberOfVertices; ++i) {
@@ -93,10 +94,12 @@ int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
             freeIndexArray(&res, i);
         }
     }
-    for (size_t i = 0; i < n - 2; ++i) {
-        for (size_t j = i + 1; j < n -1; ++j) {
-            for (size_t t = j + 1; t < n; ++t) {
-                float temp = (getAreaTriangle((*xArray)[i], (*xArray)[j], (*xArray)[t], (*yArray)[i], (*yArray)[j], (*yArray)[t]));
+    // перебираем тройки решений
+    float maxArea = 0.0f;
+    for (size_t i = 0; i < size - 2; ++i) {
+        for (size_t j = i + 1; j < size -1; ++j) {
+            for (size_t t = j + 1; t < size; ++t) {
+                float temp = (getAreaTriangle(xArray[i], xArray[j], xArray[t], yArray[i], yArray[j], yArray[t]));
                 if (temp > maxArea) {
                     *(res[0]) = i;
                     *(res[1]) = j;
@@ -106,6 +109,7 @@ int **getIndexOfMaxAreaTriangle(float ** xArray, float ** yArray, size_t n) {
             }
         }
     }
+
     if (maxArea <= 0.0f) { freeIndexArray(&res, numberOfVertices); return NULL; }
     return res;
 }
@@ -127,11 +131,7 @@ void freeIndexArray(int *** indexArray, size_t size) {
     free(indexArray[0]);
 }
 
-void freePointsArray(float *** pointsArray, size_t numberCoordinate) {
-    if (pointsArray == NULL) { return; }
-
-    for (size_t i = 0; i < numberCoordinate; i++) {
-        free(pointsArray[0][i]);
-    }
-    free(pointsArray[0]);
+void freePoints(Points * points) {
+    free(points->xArray);
+    free(points->yArray);
 }

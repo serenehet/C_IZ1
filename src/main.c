@@ -57,22 +57,23 @@
 
 extern unsigned int numberOfVertices;
 extern const unsigned int nCoordinates;
-extern const unsigned int iX;
-extern const unsigned int iY;
 
 int main() {
     // выделяем память
-    float ** pointsArray = (float **)calloc(nCoordinates, sizeof(float *));
+    Points points;
+    points.xArray = NULL;
+    points.yArray = NULL;
     //заполняем массивы из стандартного ввода
     size_t size = 0;
-//    size = fillPointsArray(pointsArray); //закоментировать, для прохождения travis
+    size = fillPoints(&points);
     if (size < 3) { return 0; }
     //получаем решение
-    int ** indexArray = getIndexOfMaxAreaTriangle(&(pointsArray[iX]), &(pointsArray[iY]), size);
+    int ** indexArray = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
+    if (indexArray == NULL) { return 0; }
     //печатаем решение
     printPtrArray((const int **) indexArray, numberOfVertices);
     //освобождаем память
     freeIndexArray(&indexArray, numberOfVertices);
-    freePointsArray(&pointsArray, nCoordinates);
+    freePoints(&points);
     return 0;
 }

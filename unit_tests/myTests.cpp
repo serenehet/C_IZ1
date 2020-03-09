@@ -13,46 +13,61 @@ TEST(testAreaComparison, test1) {
     ASSERT_EQ(area1 > area2, true);
 }
 
-
 TEST(testDecision, test1) {
-    size_t size = 0;
-    float **xArray = NULL;
-    float **yArray = NULL;
+    Points points;
+    size_t size = 3;
+    points.xArray = (float *)calloc(size, sizeof(float));
+    points.yArray = (float *)calloc(size, sizeof(float));
 
-    int ** testRes = getIndexOfMaxAreaTriangle(xArray, yArray, size);
-    ASSERT_EQ(NULL, testRes);
+    points.xArray[0] = 0; points.yArray[0] = 0;
+    points.xArray[1] = 0; points.yArray[1] = 1;
+    points.xArray[2] = 1; points.yArray[2] = 0;
 
+    int ** testRes = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
+
+    ASSERT_EQ(0, testRes[0][0]);
+    ASSERT_EQ(1, testRes[1][0]);
+    ASSERT_EQ(2, testRes[2][0]);
+
+    freeIndexArray(&testRes, 3);
+    freePoints(&points);
 }
 
 TEST(testDecision, test2) {
-    size_t size = 2;
-    float **xArray = NULL;
-    float **yArray = NULL;
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 0);
 
-    int ** testRes = getIndexOfMaxAreaTriangle(xArray, yArray, size);
     ASSERT_EQ(NULL, testRes);
 }
 
-
 TEST(testDecision, test3) {
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 2);
+
+    ASSERT_EQ(NULL, testRes);
+}
+
+TEST(testDecision, test4) {
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 4);
+
+    ASSERT_EQ(NULL, testRes);
+}
+
+TEST(testDecision, test5) {
+    Points points;
     size_t size = 4;
-    float ** pointsArray = (float **)calloc(2, sizeof(float *));
-    pointsArray[0] = (float *)calloc(size, sizeof(float));
-    pointsArray[1] = (float *)calloc(size, sizeof(float));
-    pointsArray[0][0] = 0;
-    pointsArray[1][0] = 0;
-    pointsArray[0][1] = 2;
-    pointsArray[1][1] = 2;
-    pointsArray[0][2] = 9;
-    pointsArray[1][2] = 0;
-    pointsArray[0][3] = 0;
-    pointsArray[1][3] = 9;
+    points.xArray = (float *)calloc(size, sizeof(float));
+    points.yArray = (float *)calloc(size, sizeof(float));
 
-    int ** res = getIndexOfMaxAreaTriangle(&(pointsArray[0]), &(pointsArray[1]), size);
-    ASSERT_EQ(0, res[0][0]);
-    ASSERT_EQ(2, res[1][0]);
-    ASSERT_EQ(3, res[2][0]);
+    points.xArray[0] = 0; points.yArray[0] = 0;
+    points.xArray[1] = 2; points.yArray[1] = 2;
+    points.xArray[2] = 9; points.yArray[2] = 0;
+    points.xArray[3] = 0; points.yArray[3] = 9;
 
-    freePointsArray(&pointsArray, 2);
-    freeIndexArray(&res, 3);
+    int ** testRes = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
+
+    ASSERT_EQ(0, testRes[0][0]);
+    ASSERT_EQ(2, testRes[1][0]);
+    ASSERT_EQ(3, testRes[2][0]);
+
+    freeIndexArray(&testRes, 3);
+    freePoints(&points);
 }
