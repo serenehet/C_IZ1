@@ -54,17 +54,30 @@
     ---
  */
 #include "../include/dz.h"
+#include "../include/tests.h"
+#include <stdbool.h>
 
 extern unsigned int numberOfVertices;
 
+int mainForUser();
+int mainForTravis();
+
 int main() {
+    return mainForTravis(); // закоментировать для работы с юзером
+//    return mainForUser(); // закоментировать для прохождения travis
+}
+
+int mainForTravis() {
+    return testAll();
+}
+
+int mainForUser() {
     // выделяем память
     Points points;
     points.xArray = NULL;
     points.yArray = NULL;
     //заполняем массивы из стандартного ввода
-    size_t size = 0;
-//    size = fillPoints(&points); //закоментировать для travis
+    size_t size = fillPoints(&points); //закоментировать для travis
     if (size < 3) { return 0; }
     //получаем решение
     int ** indexArray = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
@@ -74,5 +87,4 @@ int main() {
     //освобождаем память
     freeIndexArray(&indexArray, numberOfVertices);
     freePoints(&points);
-    return 0;
 }
