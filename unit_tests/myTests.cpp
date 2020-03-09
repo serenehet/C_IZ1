@@ -5,29 +5,68 @@
 #include "gtest/gtest.h"
 extern "C" {
 #include "dz.h"
-#include "tests.h"
 }
 
 TEST(testAreaComparison, test1) {
-    ASSERT_EQ(test1AreaComparison(), true);
+    float area1 = getAreaTriangle(0, 9, 0, 0, 9, 9);
+    float area2 = getAreaTriangle(2, 3, 4, 4, 3, 2);
+    ASSERT_EQ(area1 > area2, true);
 }
 
 TEST(testDecision, test1) {
-    ASSERT_EQ(test1Decision(), true);
+    Points points;
+    size_t size = 3;
+    points.xArray = (float *)calloc(size, sizeof(float));
+    points.yArray = (float *)calloc(size, sizeof(float));
+
+    points.xArray[0] = 0; points.yArray[0] = 0;
+    points.xArray[1] = 0; points.yArray[1] = 1;
+    points.xArray[2] = 1; points.yArray[2] = 0;
+
+    int ** testRes = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
+
+    int key = (0 == testRes[0][0]);
+    key = (key && (1 == testRes[1][0]));
+    key = (key && (2 == testRes[2][0]));
+
+    freeIndexArray(&testRes, 3);
+    freePoints(&points);
+    ASSERT_EQ(key, true);
 }
 
 TEST(testDecision, test2) {
-    ASSERT_EQ(test2Decision(), true);
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 0);
+    ASSERT_EQ(NULL, testRes);
 }
 
 TEST(testDecision, test3) {
-    ASSERT_EQ(test3Decision(), true);
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 2);
+    ASSERT_EQ(NULL, testRes);
 }
 
 TEST(testDecision, test4) {
-    ASSERT_EQ(test4Decision(), true);
+    int ** testRes = getIndexMaxAreaTriangle(NULL, NULL, 4);
+    ASSERT_EQ(NULL, testRes);
 }
 
 TEST(testDecision, test5) {
-    ASSERT_EQ(test5Decision(), true);
+    Points points;
+    size_t size = 4;
+    points.xArray = (float *)calloc(size, sizeof(float));
+    points.yArray = (float *)calloc(size, sizeof(float));
+
+    points.xArray[0] = 0; points.yArray[0] = 0;
+    points.xArray[1] = 2; points.yArray[1] = 2;
+    points.xArray[2] = 9; points.yArray[2] = 0;
+    points.xArray[3] = 0; points.yArray[3] = 9;
+
+    int ** testRes = getIndexMaxAreaTriangle(points.xArray, points.yArray, size);
+
+    int key = (0 == testRes[0][0]);
+    key = (key && (2 == testRes[1][0]));
+    key = (key && (3 == testRes[2][0]));
+
+    freeIndexArray(&testRes, 3);
+    freePoints(&points);
+    ASSERT_EQ(key, true);
 }
